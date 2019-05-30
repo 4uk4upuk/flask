@@ -1,0 +1,18 @@
+version: '3'
+services:
+  flask:
+    restart: always
+    image: flask
+    ports:
+      - 8000:8000
+    links:
+      - dnmonster
+      - redis
+    
+  dnmonster:
+    restart: always
+    image: amouat/dnmonster
+
+  redis:
+    restart: always
+    image: redis

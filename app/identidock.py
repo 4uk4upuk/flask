@@ -2,6 +2,7 @@ from flask import Flask, Response, request
 import requests
 import hashlib
 import redis
+import html
 
 default_name = 'Joe Bloggs'
 
