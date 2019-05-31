@@ -26,7 +26,7 @@ def main_page():
               <img src="/monster/{}"/>
               '''.format(name, name_hash)
     footer = '</body></html>'
-    return header + body + footer + 'TEST-ХУЙ'
+    return header + body + footer
 
 
 @app.route('/monster/<name>')
