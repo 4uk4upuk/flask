@@ -9,5 +9,5 @@ elif [ "$ENV" = 'UNIT' ]; then
    exec python "tests.py"
 else
    echo "Running Production Server"
-   exec gunicorn --bind 0.0.0.0:8000 identidock:app
+   exec gunicorn unix:/app/socket.sock identidock:app
 fi
